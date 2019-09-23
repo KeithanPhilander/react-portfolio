@@ -1,6 +1,5 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
-import Container from '@material-ui/core/Container'
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
@@ -23,19 +22,6 @@ const StyledBar = withStyles({
   },
 })(AppBar);
 
-const Section = withStyles({
-    root: {
-      background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-      color: 'white',
-      boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-      margin: 0,
-      width: '100%',
-      padding: '1rem'
-    },
-    label: {
-      textTransform: 'capitalize',
-    },
-  })(Container);
 
 const Navigation = () => {
 
@@ -55,14 +41,13 @@ const Navigation = () => {
                         </Grid>
 
                         <Grid item>
-                        <div>
-                            
+                            <div>
                                 <Link style={{ textDecoration: "none" }} to="/home">
                                     <Button style={{ color: "white" }} raised>Home</Button>
                                 </Link>
                                     
-                                <Link style={{ textDecoration: "none" }} to="/products">
-                                    <Button style={{ color: "white" }} raised>Products</Button>
+                                <Link style={{ textDecoration: "none" }} to="/portfolio">
+                                    <Button style={{ color: "white" }} raised>Portfolio</Button>
                                 </Link>
                                 <Link style={{ textDecoration: "none" }} to="/blog">
                                     <Button style={{ color: "white" }} raised>Blog</Button>
@@ -70,14 +55,14 @@ const Navigation = () => {
                                 <Link style={{ textDecoration: "none" }} to="/contact">
                                     <Button style={{ color: "white" }} raised>Contact</Button>
                                 </Link>
-                        </div>
+                            </div>
                         </Grid>
                     </Grid>
                 </Toolbar>
             </StyledBar>
-            <Section>
+            <div>
                 <Main/>
-            </Section>
+            </div>
         </React.Fragment>
     );
 }
